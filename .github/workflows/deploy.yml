@@ -3,10 +3,10 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main
+    - main
   pull_request:
     branches:
-      - main
+    - main
 
 permissions:
   contents: write
@@ -16,34 +16,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Fetch all history for git-revision-date
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0    # Fetch all history for git-revision-date
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
 
-      - name: Install UV
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+    - name: Install UV
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
-      - name: Install dependencies
-        run: |
-          uv venv
-          source .venv/bin/activate
-          uv pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        uv sync
 
-      - name: Build site
-        run: |
-          source .venv/bin/activate
-          mkdocs build --strict
+    - name: Build site
+      run: |
+        uv run mkdocs build --strict
 
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          source .venv/bin/activate
-          mkdocs gh-deploy --force
+    - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        uv run mkdocs gh-deploy --force
