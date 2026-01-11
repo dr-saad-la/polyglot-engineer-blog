@@ -1,0 +1,60 @@
+# Python Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# UV Package Manager
+uv.lock
+
+# MkDocs Build Output
+site/
+.cache/
+
+# Personal Notes Directory
+notes/
+Notes/
+NOTES/
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment Variables
+.env
+.env.local
+
+# Backup Files
+*.bak
+*.tmp
+*.backup
+
+# OS Generated
+Thumbs.db
+Desktop.ini
