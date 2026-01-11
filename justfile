@@ -19,7 +19,7 @@ build:
 
 # Deploy to GitHub Pages
 deploy:
-    uv run mkdocs gh-deploy
+    uv run mkdocs gh-deploy --force
 
 # Clean build artifacts
 clean:
