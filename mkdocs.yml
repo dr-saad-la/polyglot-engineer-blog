@@ -191,31 +191,16 @@ nav:
 - Home: index.md
 - Blog:
   - blog/index.md
-  - Recent Posts:
-    - Production ML Best Practices: blog/ml-production.md
-    - Rust vs Python for ML: blog/rust-vs-python.md
-    - Docker for ML Deployment: blog/docker-deployment.md
+#  - Recent Posts:
 - Tutorials:
   - tutorials/index.md
-  - Getting Started:
-    - FastAPI ML Deployment: tutorials/fastapi-ml-deployment.md
-    - Kubernetes MLOps: tutorials/kubernetes-mlops.md
-    - Production Pipelines: tutorials/production-pipelines.md
+#  - Getting Started:
 - Guides:
   - guides/index.md
-  - Development:
-    - Python Best Practices: guides/python-best-practices.md
-    - Rust for Machine Learning: guides/rust-for-ml.md
-    - Full-Stack ML Applications: guides/full-stack-ml.md
+#  - Development:
 - Projects:
   - projects/index.md
-  - Showcases:
-    - Smart Agri-AI Platform: projects/smart-agri-ai.md
-    - Text Processing Application: projects/text-processing-app.md
-    - Healthcare Analytics System: projects/healthcare-analytics.md
+#  - Showcases:
 - Resources:
   - resources/index.md
-  - Tools & Ecosystem: resources/tools-ecosystem.md
-  - Learning Resources: resources/learning-resources.md
-  - Recommended Reading: resources/recommended-reading.md
 - About: about.md
