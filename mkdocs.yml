@@ -23,22 +23,22 @@ theme:
   # Color Scheme
   palette:
     # Dark mode (primary)
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: purple
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: indigo
+    accent: purple
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
 
     # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: purple
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: indigo
+    accent: purple
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
 
   # Typography
   font:
@@ -47,31 +47,31 @@ theme:
 
   # Features
   features:
-    - announce.dismiss              # Dismissible announcements
-    - content.action.edit           # Edit button
-    - content.action.view           # View source button
-    - content.code.annotate         # Code annotations
-    - content.code.copy             # Copy code button
-    - content.tabs.link             # Link tabs
-    - content.tooltips              # Improved tooltips
-    - header.autohide               # Auto-hide header
-    - navigation.expand             # Expand navigation
-    - navigation.footer             # Footer navigation
-    - navigation.indexes            # Section index pages
-    - navigation.instant            # Instant loading
-    - navigation.instant.prefetch   # Prefetch pages
-    - navigation.instant.progress   # Progress indicator
-    - navigation.prune              # Prune navigation
-    - navigation.sections           # Navigation sections
-    - navigation.tabs               # Top-level tabs
-    - navigation.tabs.sticky        # Sticky tabs
-    - navigation.top                # Back to top button
-    - navigation.tracking           # Anchor tracking
-    - search.highlight              # Highlight search terms
-    - search.share                  # Share search
-    - search.suggest                # Search suggestions
-    - toc.follow                    # Follow table of contents
-    - toc.integrate                 # Integrate TOC
+  - announce.dismiss                # Dismissible announcements
+  - content.action.edit             # Edit button
+  - content.action.view             # View source button
+  - content.code.annotate           # Code annotations
+  - content.code.copy               # Copy code button
+  - content.tabs.link               # Link tabs
+  - content.tooltips                # Improved tooltips
+  - header.autohide                 # Auto-hide header
+  - navigation.expand               # Expand navigation
+  - navigation.footer               # Footer navigation
+  - navigation.indexes              # Section index pages
+  - navigation.instant              # Instant loading
+  - navigation.instant.prefetch     # Prefetch pages
+  - navigation.instant.progress     # Progress indicator
+  - navigation.prune                # Prune navigation
+  - navigation.sections             # Navigation sections
+  - navigation.tabs                 # Top-level tabs
+  - navigation.tabs.sticky          # Sticky tabs
+  - navigation.top                  # Back to top button
+  - navigation.tracking             # Anchor tracking
+  - search.highlight                # Highlight search terms
+  - search.share                    # Share search
+  - search.suggest                  # Search suggestions
+  - toc.follow                      # Follow table of contents
+  - toc.integrate                   # Integrate TOC
 
   # Icons
   icon:
@@ -85,88 +85,88 @@ theme:
 
 # Plugins
 plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
+- search:
+    separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+- minify:
+    minify_html: true
+    minify_js: true
+    minify_css: true
+    htmlmin_opts:
+      remove_comments: true
+- git-revision-date-localized:
+    enable_creation_date: true
+    type: timeago
 
 # Extensions
 markdown_extensions:
   # Python Markdown
-  - abbr
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - toc:
-      permalink: true
-      toc_depth: 3
+- abbr
+- admonition
+- attr_list
+- def_list
+- footnotes
+- md_in_html
+- toc:
+    permalink: true
+    toc_depth: 3
 
   # Python Markdown Extensions
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/abbreviations.md
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.snippets:
+    auto_append:
+    - includes/abbreviations.md
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
 
 # Additional CSS
 extra_css:
-  - stylesheets/extra.css
+- stylesheets/extra.css
 
 # Additional JavaScript
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+- javascripts/mathjax.js
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Social Links
 extra:
   social:
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/saad-laouadi
-      name: LinkedIn Profile
-    - icon: fontawesome/brands/github
-      link: https://github.com/dr-saad-la
-      name: GitHub Profile
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/DrSaadLaouadi
-      name: Twitter/X Profile
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:dr.saad.laouadi@gmail.com
-      name: Email Contact
+  - icon: fontawesome/brands/linkedin
+    link: https://linkedin.com/in/saad-laouadi
+    name: LinkedIn Profile
+  - icon: fontawesome/brands/github
+    link: https://github.com/dr-saad-la
+    name: GitHub Profile
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/DrSaadLaouadi
+    name: Twitter/X Profile
+  - icon: fontawesome/solid/paper-plane
+    link: mailto:dr.saad.laouadi@gmail.com
+    name: Email Contact
 
   analytics:
     provider: google
@@ -174,48 +174,48 @@ extra:
     feedback:
       title: Was this page helpful?
       ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Thanks for your feedback! Help us improve by
-            <a href="https://github.com/dr-saad-la/polyglot-engineer-blog/issues/new" target="_blank" rel="noopener">opening an issue</a>.
+      - icon: material/emoticon-happy-outline
+        name: This page was helpful
+        data: 1
+        note: >-
+          Thanks for your feedback!
+      - icon: material/emoticon-sad-outline
+        name: This page could be improved
+        data: 0
+        note: >-
+          Thanks for your feedback! Help us improve by
+          <a href="https://github.com/dr-saad-la/polyglot-engineer-blog/issues/new" target="_blank" rel="noopener">opening an issue</a>.
 
 # Navigation Structure
 nav:
-  - Home: index.md
-  - Blog:
-    - blog/index.md
-    - Recent Posts:
-      - Production ML Best Practices: blog/ml-production.md
-      - Rust vs Python for ML: blog/rust-vs-python.md
-      - Docker for ML Deployment: blog/docker-deployment.md
-  - Tutorials:
-    - tutorials/index.md
-    - Getting Started:
-      - FastAPI ML Deployment: tutorials/fastapi-ml-deployment.md
-      - Kubernetes MLOps: tutorials/kubernetes-mlops.md
-      - Production Pipelines: tutorials/production-pipelines.md
-  - Guides:
-    - guides/index.md
-    - Development:
-      - Python Best Practices: guides/python-best-practices.md
-      - Rust for Machine Learning: guides/rust-for-ml.md
-      - Full-Stack ML Applications: guides/full-stack-ml.md
-  - Projects:
-    - projects/index.md
-    - Showcases:
-      - Smart Agri-AI Platform: projects/smart-agri-ai.md
-      - Text Processing Application: projects/text-processing-app.md
-      - Healthcare Analytics System: projects/healthcare-analytics.md
-  - Resources:
-    - resources/index.md
-    - Tools & Ecosystem: resources/tools-ecosystem.md
-    - Learning Resources: resources/learning-resources.md
-    - Recommended Reading: resources/recommended-reading.md
-  - About: about.md
+- Home: index.md
+- Blog:
+  - blog/index.md
+  - Recent Posts:
+    - Production ML Best Practices: blog/ml-production.md
+    - Rust vs Python for ML: blog/rust-vs-python.md
+    - Docker for ML Deployment: blog/docker-deployment.md
+- Tutorials:
+  - tutorials/index.md
+  - Getting Started:
+    - FastAPI ML Deployment: tutorials/fastapi-ml-deployment.md
+    - Kubernetes MLOps: tutorials/kubernetes-mlops.md
+    - Production Pipelines: tutorials/production-pipelines.md
+- Guides:
+  - guides/index.md
+  - Development:
+    - Python Best Practices: guides/python-best-practices.md
+    - Rust for Machine Learning: guides/rust-for-ml.md
+    - Full-Stack ML Applications: guides/full-stack-ml.md
+- Projects:
+  - projects/index.md
+  - Showcases:
+    - Smart Agri-AI Platform: projects/smart-agri-ai.md
+    - Text Processing Application: projects/text-processing-app.md
+    - Healthcare Analytics System: projects/healthcare-analytics.md
+- Resources:
+  - resources/index.md
+  - Tools & Ecosystem: resources/tools-ecosystem.md
+  - Learning Resources: resources/learning-resources.md
+  - Recommended Reading: resources/recommended-reading.md
+- About: about.md

@@ -58,3 +58,6 @@ wheels/
 # OS Generated
 Thumbs.db
 Desktop.ini
+
+# Pre-commit
+.secrets.baseline

@@ -1,0 +1,44 @@
+# Ruff configuration for The Polyglot Engineer Blog
+# https://docs.astral.sh/ruff/
+
+line-length = 88
+
+[lint]
+# Enable recommended rules
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+]
+
+# Ignore specific rules
+ignore = [
+    "E501",  # Line too long (handled by formatter)
+]
+
+# Exclude directories
+exclude = [
+    ".venv",
+    "venv",
+    ".git",
+    "__pycache__",
+    "site",
+    "build",
+    "dist",
+]
+
+[format]
+# Use black-compatible formatting
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[lint.isort]
+# Import sorting (replaces isort)
+known-first-party = []
