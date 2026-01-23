@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/about/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/blog/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/blog/2026-01-11-getting-started-with-uv%3A-build-a-text-processing-app/</loc>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/guides/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/projects/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/resources/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://dr-saad-la.github.io/polyglot-engineer-blog/tutorials/</loc>
-         <lastmod>2026-01-11</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
 </urlset>
