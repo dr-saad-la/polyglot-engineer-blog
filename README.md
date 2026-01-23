@@ -75,3 +75,4 @@ Copyright © 2026 Dr. Saad Laouadi. All rights reserved.
 - **Email:** dr.saad.laouadi@gmail.com
 - **LinkedIn:** [saad-laouadi](https://linkedin.com/in/dr-saad-laouadi)
 - **GitHub:** [dr-saad-la](https://github.com/dr-saad-la)
+- **X:**[DrSaadLaouadi](https://x.com/DrSaadLaouadi)
