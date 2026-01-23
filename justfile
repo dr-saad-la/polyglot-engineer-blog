@@ -132,7 +132,8 @@ quick MESSAGE:
 
 # View site statistics
 stats:
-    @echo "📊 Site Statistics:"
+    @echo "Site Statistics:"
+    @echo "****************"
     @echo "Blog posts: $(find docs/blog -name '*.md' | wc -l)"
     @echo "Tutorials: $(find docs/tutorials -name '*.md' | wc -l)"
     @echo "Guides: $(find docs/guides -name '*.md' | wc -l)"

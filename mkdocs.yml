@@ -1,11 +1,13 @@
-# Site Information
+#****************************************************
+#               Site Information
+#****************************************************
 site_name: The Polyglot Engineer
 site_url: https://dr-saad-la.github.io/polyglot-engineer-blog
 site_author: Dr. Saad Laouadi
 site_description: >-
   Production ML Systems, Multi-language Development, and Modern DevOps.
   Technical insights from building scalable AI applications across Python,
-  Rust, Java, JavaScript, TypeScript, and R.
+  Rust, Java, JavaScript, TypeScript, Julia, and R.
 
 # Repository
 repo_name: dr-saad-la/polyglot-engineer-blog
@@ -186,12 +188,15 @@ extra:
           Thanks for your feedback! Help us improve by
           <a href="https://github.com/dr-saad-la/polyglot-engineer-blog/issues/new" target="_blank" rel="noopener">opening an issue</a>.
 
+#********************************
 # Navigation Structure
+#********************************
 nav:
 - Home: index.md
 - Blog:
   - blog/index.md
-#  - Recent Posts:
+  - Recent Posts:
+      - blog/2026-01-11-getting-started-with-uv:-build-a-text-processing-app.md
 - Tutorials:
   - tutorials/index.md
 #  - Getting Started:
