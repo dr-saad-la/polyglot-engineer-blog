@@ -35,7 +35,7 @@ Curated list of Python libraries for time series analysis and forecasting.
 7. **deeptime** - Dynamical systems [GitHub](https://github.com/deeptime-ml/deeptime) | [Docs](https://deeptime-ml.github.io/) Markov models, Koopman theory, molecular dynamics
 
 ## Deep Learning
-1.**PyTorch Forecasting** - Neural forecasting: [GitHub](https://github.com/jdb78/pytorch-forecasting) | [Docs](https://pytorch-forecasting.readthedocs.io/) N-BEATS, TFT, DeepAR, NHiTS implementations
+1. **PyTorch Forecasting** - Neural forecasting: [GitHub](https://github.com/jdb78/pytorch-forecasting) | [Docs](https://pytorch-forecasting.readthedocs.io/) N-BEATS, TFT, DeepAR, NHiTS implementations
 2. **Darts** - User-friendly forecasting [GitHub](https://github.com/unit8co/darts) | [Docs](https://unit8co.github.io/darts/) Classical + neural methods, backtesting, ensemble models
 3. **NeuralProphet** - Neural Prophet [GitHub](https://github.com/ourownstory/neural_prophet) |
    [Docs](https://neuralprophet.com/) Prophet reimplemented with PyTorch, autoregression support
