@@ -55,6 +55,7 @@ Building something interesting? Running into production challenges? Just want to
 
 - [Email me](mailto:dr.saad.laouadi@gmail.com)
 - [Connect on LinkedIn](https://linkedin.com/in/dr-saad-laouadi)
+- [Connect on X](https://x.com/DrSaadLaouadi)
 - [Check out my work on GitHub](https://github.com/dr-saad-la)
 
 ---

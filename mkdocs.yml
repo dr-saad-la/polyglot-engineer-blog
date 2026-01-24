@@ -17,6 +17,17 @@ edit_uri: edit/main/docs/
 # Copyright
 copyright: Copyright &copy; 2026 Dr. Saad Laouadi
 
+# Watch changes
+watch:
+  - docs/
+  - mkdocs.yml
+
+# Don't watch these
+exclude_docs: |
+  .venv/
+  venv/
+  __pycache__/
+
 # Theme Configuration
 theme:
   name: material
@@ -87,17 +98,24 @@ theme:
 
 # Plugins
 plugins:
-- search:
-    separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-- minify:
-    minify_html: true
-    minify_js: true
-    minify_css: true
-    htmlmin_opts:
-      remove_comments: true
-- git-revision-date-localized:
-    enable_creation_date: true
-    type: timeago
+  - blog:
+      blog_dir: blog
+      post_date_format: medium
+      post_url_format: "{date}/{slug}"
+      archive_date_format: MMMM yyyy
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      follow_git_renames: false
+  - awesome-pages
 
 # Extensions
 markdown_extensions:
@@ -192,20 +210,98 @@ extra:
 # Navigation Structure
 #********************************
 nav:
-- Home: index.md
-- Blog:
-  - blog/index.md
-  - Recent Posts:
-      - blog/2026-01-11-getting-started-with-uv:-build-a-text-processing-app.md
-- Tutorials:
-  - tutorials/index.md
-#  - Getting Started:
-- Guides:
-  - guides/index.md
-#  - Development:
-- Projects:
-  - projects/index.md
-#  - Showcases:
-- Resources:
-  - resources/index.md
-- About: about.md
+  - Home: index.md
+
+  - Blog:
+      - blog/index.md
+      - Recent Posts:
+          - blog/2026-01-11-getting-started-with-uv:-build-a-text-processing-app.md
+
+  - Tutorials:
+      - tutorials/index.md
+      #  - Getting Started:
+
+  - Guides:
+      - guides/index.md
+      - guides/the-complete-guide-to-uv-for-python-development.md
+      #  - Development:
+
+  - Projects:
+      - projects/index.md
+      #  - Showcases:
+
+  - Resources:
+      - resources/index.md
+
+      - Programming:
+          - resources/programming/index.md
+          - Python:
+              - resources/programming/python/index.md
+              - Basics: resources/programming/python/basics.md
+              - Advanced: resources/programming/python/advanced.md
+              - Libraries: resources/programming/python/libraries.md
+          - R:
+              - resources/programming/r/index.md
+              - Tidyverse: resources/programming/r/tidyverse.md
+              - Packages: resources/programming/r/packages.md
+          - Rust:
+              - resources/programming/rust/index.md
+              - Basics: resources/programming/rust/basics.md
+              - ML Tools: resources/programming/rust/ml-tools.md
+          - JavaScript: resources/programming/javascript/index.md
+          - Java: resources/programming/java/index.md
+
+      - Data Science & ML:
+          - resources/data-science/index.md
+          - Machine Learning:
+              - resources/data-science/machine-learning/index.md
+              - Supervised: resources/data-science/machine-learning/supervised.md
+              - Unsupervised: resources/data-science/machine-learning/unsupervised.md
+              - Reinforcement: resources/data-science/machine-learning/reinforcement.md
+          - Deep Learning:
+              - resources/data-science/deep-learning/index.md
+              - Frameworks: resources/data-science/deep-learning/frameworks.md
+              - Computer Vision: resources/data-science/deep-learning/computer-vision.md
+              - NLP: resources/data-science/deep-learning/nlp.md
+          - Time Series:
+              - resources/data-science/time-series/index.md
+              - Forecasting: resources/data-science/time-series/forecasting.md
+              - Anomaly Detection: resources/data-science/time-series/anomaly-detection.md
+          - Statistics:
+              - resources/data-science/statistics/index.md
+              - Foundations: resources/data-science/statistics/foundations.md
+              - Bayesian: resources/data-science/statistics/bayesian.md
+          - Data Engineering:
+              - resources/data-science/data-engineering/index.md
+              - Pipelines: resources/data-science/data-engineering/pipelines.md
+              - Databases: resources/data-science/data-engineering/databases.md
+
+      - Tools & Platforms:
+          - resources/tools/index.md
+          - Development:
+              - resources/tools/development/index.md
+              - Version Control: resources/tools/development/version-control.md
+              - Editors: resources/tools/development/editors.md
+          - Cloud:
+              - resources/tools/cloud/index.md
+              - AWS: resources/tools/cloud/aws.md
+              - Azure: resources/tools/cloud/azure.md
+              - GCP: resources/tools/cloud/gcp.md
+          - Visualization:
+              - resources/tools/data-viz/index.md
+              - Libraries: resources/tools/data-viz/libraries.md
+
+      - MLOps & Production:
+          - resources/mlops/index.md
+          - Deployment:
+              - resources/mlops/deployment/index.md
+              - Docker: resources/mlops/deployment/docker.md
+              - Kubernetes: resources/mlops/deployment/kubernetes.md
+          - Monitoring:
+              - resources/mlops/monitoring/index.md
+              - Tools: resources/mlops/monitoring/tools.md
+          - CI/CD:
+              - resources/mlops/ci-cd/index.md
+              - Pipelines: resources/mlops/ci-cd/pipelines.md
+
+  - About: about.md

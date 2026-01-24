@@ -82,6 +82,297 @@ new-tutorial TITLE:
     EOF
     echo "Created: $FILE"
 
+# Create new blog post in draft
+create-post-draft TITLE:
+    #!/usr/bin/env bash
+    DATE=$(date +%Y-%m-%d)
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    mkdir -p notes/drafts/blog
+    FILE="notes/drafts/blog/${DATE}-${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: ${DATE}
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Blog
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    Write your content here...
+    EOF
+    echo "Created draft: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new tutorial
+create-tutorial TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    FILE="docs/tutorials/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Tutorial
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Overview
+
+    ## Prerequisites
+
+    ## Step 1
+
+    ## Step 2
+
+    ## Conclusion
+    EOF
+    echo "Created: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new tutorial in draft
+create-tutorial-draft TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    mkdir -p notes/drafts/tutorials
+    FILE="notes/drafts/tutorials/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Tutorial
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Overview
+
+    ## Prerequisites
+
+    ## Step 1
+
+    ## Step 2
+
+    ## Conclusion
+    EOF
+    echo "Created draft: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new guide
+create-guide TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    FILE="docs/guides/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Guide
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Introduction
+
+    ## Table of Contents
+
+    ## Getting Started
+
+    ## Advanced Topics
+
+    ## Best Practices
+
+    ## Conclusion
+
+    ## Resources
+    EOF
+    echo "Created: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new guide in draft
+create-guide-draft TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    mkdir -p notes/drafts/guides
+    FILE="notes/drafts/guides/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Guide
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Introduction
+
+    ## Table of Contents
+
+    ## Getting Started
+
+    ## Advanced Topics
+
+    ## Best Practices
+
+    ## Conclusion
+
+    ## Resources
+    EOF
+    echo "Created draft: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new project showcase
+create-project TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    FILE="docs/projects/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Project
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Overview
+
+    ## Problem Statement
+
+    ## Solution
+
+    ## Tech Stack
+
+    ## Key Features
+
+    ## Results
+
+    ## Code
+
+    GitHub: [repository-link]
+
+    ## Lessons Learned
+    EOF
+    echo "Created: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Create new project showcase in draft
+create-project-draft TITLE:
+    #!/usr/bin/env bash
+    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+    mkdir -p notes/drafts/projects
+    FILE="notes/drafts/projects/${SLUG}.md"
+    cat > "$FILE" << EOF
+    ---
+    title: "{{TITLE}}"
+    date: $(date +%Y-%m-%d)
+    authors:
+      - Dr. Saad Laouadi
+    categories:
+      - Project
+    tags:
+      - TODO
+    description: >
+      Add description here
+    ---
+
+    # {{TITLE}}
+
+    ## Overview
+
+    ## Problem Statement
+
+    ## Solution
+
+    ## Tech Stack
+
+    ## Key Features
+
+    ## Results
+
+    ## Code
+
+    GitHub: [repository-link]
+
+    ## Lessons Learned
+    EOF
+    echo "Created draft: $FILE"
+    echo "Edit with: vim $FILE"
+
+# Move draft to published (usage: just publish-draft guides/getting-started-with-uv)
+publish-draft PATH:
+    #!/usr/bin/env bash
+    DRAFT_FILE="notes/drafts/{{PATH}}.md"
+    PUB_FILE="docs/{{PATH}}.md"
+
+    if [ ! -f "$DRAFT_FILE" ]; then
+        echo "Error: Draft not found: $DRAFT_FILE"
+        exit 1
+    fi
+
+    mkdir -p $(dirname "$PUB_FILE")
+    mv "$DRAFT_FILE" "$PUB_FILE"
+    echo "Published: $DRAFT_FILE → $PUB_FILE"
+
+
+# Show recent guides
+recent-guides:
+    #!/usr/bin/env bash
+    for file in docs/guides/*.md; do
+        date=$(grep "^date:" "$file" | cut -d' ' -f2)
+        echo "$date - $(basename $file)"
+    done | sort -r | head -10
+
+# Show recent tutorials
+recent-tutorials:
+    #!/usr/bin/env bash
+    for file in docs/tutorials/*.md; do
+        date=$(grep "^date:" "$file" | cut -d' ' -f2)
+        echo "$date - $(basename $file)"
+    done | sort -r | head -10
+
 # Run pre-commit on all files
 lint:
     pre-commit run --all-files
