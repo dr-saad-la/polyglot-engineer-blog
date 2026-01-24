@@ -26,7 +26,8 @@ Step-by-step tutorials on Docker for ML, Kubernetes deployments, FastAPI archite
 
 ## Recent Posts
 
-Coming soon—in the meantime, check out the [About](/about) page to learn more about the work behind this blog.
+Coming soon—in the meantime, check out the [About](about.md) page to learn more about the work
+behind this blog.d
 
 ---
 

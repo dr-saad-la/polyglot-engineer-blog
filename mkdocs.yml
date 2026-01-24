@@ -98,6 +98,7 @@ theme:
 
 # Plugins
 plugins:
+  - awesome-pages
   - blog:
       blog_dir: blog
       post_date_format: medium
@@ -114,8 +115,8 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
-      follow_git_renames: false
-  - awesome-pages
+      enable_git_follow: false
+
 
 # Extensions
 markdown_extensions:

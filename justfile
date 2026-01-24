@@ -11,7 +11,11 @@ install:
 
 # Serve site locally with live reload
 serve:
-    uv run mkdocs serve
+    uv run mkdocs serve --clean --dev-addr 127.0.0.1:8000
+
+# force serve
+force-serve:
+    uv run mkdocs serve --strict --clean --dev-addr 127.0.0.1:8000
 
 # Build site for production
 build:
