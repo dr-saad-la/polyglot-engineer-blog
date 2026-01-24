@@ -266,6 +266,7 @@ nav:
               - NLP: resources/data-science/deep-learning/nlp.md
           - Time Series:
               - resources/data-science/time-series/index.md
+              - Python Libraries: resources/data-science/time-series/python-libraries.md
               - Forecasting: resources/data-science/time-series/forecasting.md
               - Anomaly Detection: resources/data-science/time-series/anomaly-detection.md
           - Statistics:
