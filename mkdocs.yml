@@ -222,6 +222,7 @@ nav:
 
   - Tutorials:
       - tutorials/index.md
+      - From Makefile to just: tutorials/from-makefile-to-just.md
       #  - Getting Started:
 
   - Guides:
