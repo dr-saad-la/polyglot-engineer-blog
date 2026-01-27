@@ -117,6 +117,7 @@ plugins:
       type: timeago
       enable_git_follow: false
       fallback_to_build_date: true
+      strict: false
 
 
 # Extensions
@@ -268,6 +269,11 @@ nav:
           - Time Series:
               - resources/data-science/time-series/index.md
               - Python Libraries: resources/data-science/time-series/python-libraries.md
+              - Books: resources/data-science/time-series/books.md
+              - Courses: resources/data-science/time-series/courses.md
+              - Datasets: resources/data-science/time-series/datasets.md
+              - Papers: resources/data-science/time-series/papers.md
+              - Tools: resources/data-science/time-series/tools.md
               - Forecasting: resources/data-science/time-series/forecasting.md
               - Anomaly Detection: resources/data-science/time-series/anomaly-detection.md
           - Statistics:
