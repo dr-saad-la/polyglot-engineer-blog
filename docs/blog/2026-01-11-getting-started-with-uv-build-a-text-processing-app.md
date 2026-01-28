@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with UV: Build a Text Processing App"
-date: 2024-01-15
+date: 2026-01-11
 authors:
   - Dr. Saad Laouadi
 categories:
