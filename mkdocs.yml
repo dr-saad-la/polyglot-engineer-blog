@@ -106,6 +106,37 @@ plugins:
       archive_date_format: MMMM yyyy
       authors: true
       authors_file: blog/.authors.yml
+
+      # Pagination
+      pagination: true
+      pagination_per_page: 5
+      pagination_url_format: "page/{page}"
+
+      # Excerpts
+      post_excerpt: required
+      post_excerpt_separator: <!-- more -->
+
+      # Read more
+      post_readmore: Continue reading
+      post_readmore_separator: <!-- more -->
+
+      # Archive
+      archive: true
+      archive_name: Archive
+      archive_url_format: "archive/{date}"
+
+      # Categories
+      categories: true
+      categories_name: Categories
+      categories_url_format: "category/{slug}"
+      categories_allowed:
+        - Blog
+        - Tutorial
+        - DevOps
+        - Python
+        - Tools
+
+
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:

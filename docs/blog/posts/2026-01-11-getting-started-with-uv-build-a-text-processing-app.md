@@ -24,6 +24,8 @@ Let me show you how to use it by building something real: a text processing appl
 
 No theory dumps. Just practical steps that get you from zero to a working app.
 
+<!-- more -->
+
 ## What is UV?
 
 UV is a Python package manager written in Rust. Think of it as pip and virtualenv combined, but 10-100× faster.

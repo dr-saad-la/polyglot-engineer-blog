@@ -89,10 +89,9 @@ new-tutorial TITLE:
 # Create new blog post in draft
 create-post-draft TITLE:
     #!/usr/bin/env bash
+    SAFE_TITLE=$(echo "{{TITLE}}" | sed 's/[^a-zA-Z0-9-]/-/g' | tr '[:upper:]' '[:lower:]' | sed 's/--*/-/g')
     DATE=$(date +%Y-%m-%d)
-    SLUG=$(echo "{{TITLE}}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
-    mkdir -p notes/drafts/blog
-    FILE="notes/drafts/blog/${DATE}-${SLUG}.md"
+    FILEPATH="notes/drafts/blog/posts/${DATE}-${SAFE_TITLE}.md"
     cat > "$FILE" << EOF
     ---
     title: "{{TITLE}}"
@@ -348,12 +347,13 @@ create-project-draft TITLE:
 # Move draft to published (usage: just publish-draft guides/getting-started-with-uv)
 publish-draft PATH:
     #!/usr/bin/env bash
-    DRAFT_FILE="notes/drafts/{{PATH}}.md"
-    PUB_FILE="docs/{{PATH}}.md"
-
-    if [ ! -f "$DRAFT_FILE" ]; then
-        echo "Error: Draft not found: $DRAFT_FILE"
-        exit 1
+    DRAFT_PATH="notes/drafts/{{PATH}}"
+    if [[ "{{PATH}}" == blog/* ]]; then
+        # For blog posts, ensure they go to blog/posts/
+        FILENAME=$(basename "{{PATH}}")
+        PUBLISH_PATH="docs/blog/posts/${FILENAME}"  # ← Force posts/ directory
+    else
+        PUBLISH_PATH="docs/{{PATH}}"
     fi
 
     mkdir -p $(dirname "$PUB_FILE")

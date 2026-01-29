@@ -24,6 +24,8 @@ Enter `just`: a simple command runner that makes automation effortless.
 
 Here's how to start using it today.
 
+<!-- more -->
+
 ## What is just?
 
 `just` is a command runner. Write commands once, run them anywhere. Think of it as your project's command hub.
