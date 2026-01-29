@@ -50,6 +50,19 @@ If you're in the messy middle ground between research and production, you're in 
 
 ---
 
+## Code Examples
+
+All code from tutorials and guides is available on GitHub:
+
+**Repository:** [polyglot-engineer-code-examples](https://github.com/dr-saad-la/polyglot-engineer-code-examples)
+
+Browse by language:
+- [Python](https://github.com/dr-saad-la/polyglot-engineer-code-examples/tree/main/python)
+- [Rust](https://github.com/dr-saad-la/polyglot-engineer-code-examples/tree/main/rust)
+- [R](https://github.com/dr-saad-la/polyglot-engineer-code-examples/tree/main/r)
+- [JavaScript](https://github.com/dr-saad-la/polyglot-engineer-code-examples/tree/main/javascript)
+- [Java](https://github.com/dr-saad-la/polyglot-engineer-code-examples/tree/main/java)
+
 ## Get in Touch
 
 Building something interesting? Running into production challenges? Just want to talk about systems that actually work?
