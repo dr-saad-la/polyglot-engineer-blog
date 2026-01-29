@@ -2,7 +2,7 @@
 title: "Getting Started with just: The Task Runner You Need"
 date: 2026-01-28
 authors:
-  - Dr. Saad Laouadi
+  - saad
 categories:
   - Blog
   - DevOps
@@ -517,4 +517,4 @@ Create a `justfile` in your next project. You'll wonder how you worked without i
 
 **Already using just?** What commands do you run most? [Email me](mailto:dr.saad.laouadi@gmail.com)
 
-**Want a complete migration guide?** Check out [From Makefile to just: A Modern Task Runner](../tutorials/from-makefile-to-just.md)
+**Want a complete migration guide?** Check out [From Makefile to just: A Modern Task Runner](../../tutorials/from-makefile-to-just.md)

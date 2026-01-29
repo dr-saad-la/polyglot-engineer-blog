@@ -104,7 +104,8 @@ plugins:
       post_date_format: medium
       post_url_format: "{date}/{slug}"
       archive_date_format: MMMM yyyy
-      authors_file: .authors.yml
+      authors: true
+      authors_file: blog/.authors.yml
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
