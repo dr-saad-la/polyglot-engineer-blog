@@ -296,7 +296,7 @@ For permissions beyond this scope, please [contact me](mailto:dr.saad.laouadi@gm
 AI Expert & Data Science Educator
 
 - 📧 Email: [dr.saad.laouadi@gmail.com](mailto:dr.saad.laouadi@gmail.com)
-- 💼 LinkedIn: [saad-laouadi](https://linkedin.com/in/saad-laouadi)
+- 💼 LinkedIn: [saad-laouadi](https://linkedin.com/in/dr-saad-laouadi)
 - 🐙 GitHub: [dr-saad-la](https://github.com/dr-saad-la)
 - 🐦 X/Twitter: [@DrSaadLaouadi](https://x.com/DrSaadLaouadi)
 
