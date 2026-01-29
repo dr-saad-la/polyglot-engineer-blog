@@ -424,6 +424,7 @@ just <cmd> <arg>      # With arguments
 ## When to Use just
 
 **Perfect for:**
+
 - ✅ Running tests and linters
 - ✅ Starting development servers
 - ✅ Database migrations
@@ -503,12 +504,13 @@ just --completions zsh >> ~/.zshrc
 
 `just` is a simple tool that does one thing well: run commands.
 
-**What you get:**
-- ✅ Project automation in one file
-- ✅ Commands with arguments
-- ✅ Automatic documentation
-- ✅ Cross-platform compatibility
-- ✅ Zero configuration
+**What you get:**  
+
+- ✅ Project automation in one file  
+- ✅ Commands with arguments  
+- ✅ Automatic documentation  
+- ✅ Cross-platform compatibility  
+- ✅ Zero configuration  
 
 **Time to setup:** 5 minutes  
 **Productivity boost:** Immediate
