@@ -98,12 +98,13 @@ theme:
 
 # Plugins
 plugins:
-  - awesome-pages
+#  - awesome-pages
   - blog:
       blog_dir: blog
       post_date_format: medium
       post_url_format: "{date}/{slug}"
       archive_date_format: MMMM yyyy
+      authors_file: .authors.yml
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
@@ -217,9 +218,8 @@ nav:
 
   - Blog:
       - blog/index.md
-      - Recent Posts:
-          - blog/2026-01-11-getting-started-with-uv:-build-a-text-processing-app.md
-
+#      - Recent Posts:
+#          - blog/2026-01-11-getting-started-with-uv:-build-a-text-processing-app.md
   - Tutorials:
       - tutorials/index.md
       - From Makefile to just: tutorials/from-makefile-to-just.md
@@ -277,6 +277,7 @@ nav:
               - Tools: resources/data-science/time-series/tools.md
               - Forecasting: resources/data-science/time-series/forecasting.md
               - Anomaly Detection: resources/data-science/time-series/anomaly-detection.md
+              - Blogs and Websites: resources/data-science/time-series/blogs-websites.md
           - Statistics:
               - resources/data-science/statistics/index.md
               - Foundations: resources/data-science/statistics/foundations.md
