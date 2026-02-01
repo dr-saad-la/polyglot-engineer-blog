@@ -295,19 +295,22 @@ docs-build:
 ## Why This Template Works
 
 **Covers common tasks:**
-✅ Setup  
-✅ Development  
-✅ Testing  
-✅ Quality checks  
-✅ Deployment  
-✅ Cleanup  
+
+- Setup
+- Development
+- Testing
+- Quality checks
+- Deployment
+- Cleanup  
 
 **Uses modern tools:**
-✅ UV (not pip)  
-✅ Ruff (not black/flake8)  
-✅ pyproject.toml (not requirements.txt)  
+
+1. UV (not pip)
+2. Ruff (not black/flake8)
+3. pyproject.toml (not requirements.txt)  
 
 **Stays minimal:**
+
 ✅ ~60 lines  
 ✅ No complexity  
 ✅ Easy to understand  
@@ -327,7 +330,7 @@ I use variations of this template in:
 
 **Same structure. Different customizations.**
 
-The `check`, `test`, and `clean` commands? Identical across all 12 projects.
+The `check`, `test`, and `clean` commands? Identical across all projects.
 
 ---
 
@@ -385,6 +388,7 @@ But for most projects, most of the time, this is all you need.
 ---
 
 **Related:**
+
 - [5 Justfile Patterns You'll Use Every Day](./2026-01-29-5-justfile-patterns-you-ll-use-every-day.md)
 - [Getting Started with just](./2026-01-28-getting-started-with-just-the-task-runner-you-need.md)
 
