@@ -92,16 +92,21 @@ create-post-draft TITLE:
     SAFE_TITLE=$(echo "{{TITLE}}" | sed 's/[^a-zA-Z0-9-]/-/g' | tr '[:upper:]' '[:lower:]' | sed 's/--*/-/g')
     DATE=$(date +%Y-%m-%d)
     FILEPATH="notes/drafts/blog/posts/${DATE}-${SAFE_TITLE}.md"
-    cat > "$FILE" << EOF
+
+    # Create directory if it doesn't exist
+    mkdir -p "$(dirname "$FILEPATH")"
+
+    # Create file
+    cat > "$FILEPATH" << EOF
     ---
     title: "{{TITLE}}"
     date: ${DATE}
     authors:
-      - Dr. Saad Laouadi
+      - saad
     categories:
-      - Blog
+     - Blog
     tags:
-      - TODO
+     - TODO
     description: >
       Add description here
     ---
@@ -110,8 +115,9 @@ create-post-draft TITLE:
 
     Write your content here...
     EOF
-    echo "Created draft: $FILE"
-    echo "Edit with: vim $FILE"
+
+    echo "✓ Created draft: $FILEPATH"
+    echo "Edit with: code $FILEPATH"
 
 # Create new tutorial
 create-tutorial TITLE:
@@ -344,22 +350,32 @@ create-project-draft TITLE:
     echo "Created draft: $FILE"
     echo "Edit with: vim $FILE"
 
-# Move draft to published (usage: just publish-draft guides/getting-started-with-uv)
+# Publish draft (move from drafts to docs)
 publish-draft PATH:
     #!/usr/bin/env bash
     DRAFT_PATH="notes/drafts/{{PATH}}"
+
     if [[ "{{PATH}}" == blog/* ]]; then
         # For blog posts, ensure they go to blog/posts/
         FILENAME=$(basename "{{PATH}}")
-        PUBLISH_PATH="docs/blog/posts/${FILENAME}"  # ← Force posts/ directory
+        PUBLISH_PATH="docs/blog/posts/${FILENAME}"
     else
         PUBLISH_PATH="docs/{{PATH}}"
     fi
 
-    mkdir -p $(dirname "$PUB_FILE")
-    mv "$DRAFT_FILE" "$PUB_FILE"
-    echo "Published: $DRAFT_FILE → $PUB_FILE"
+    # Check if draft exists
+    if [ ! -f "$DRAFT_PATH" ]; then
+        echo "❌ Draft not found: $DRAFT_PATH"
+        exit 1
+    fi
 
+    # Create destination directory
+    mkdir -p "$(dirname "$PUBLISH_PATH")"
+
+    # Move file
+    mv "$DRAFT_PATH" "$PUBLISH_PATH"
+
+    echo "✓ Published: $DRAFT_PATH → $PUBLISH_PATH"
 
 # Show recent guides
 recent-guides:

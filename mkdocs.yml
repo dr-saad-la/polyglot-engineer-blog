@@ -117,8 +117,8 @@ plugins:
       post_excerpt_separator: <!-- more -->
 
       # Read more
-      post_readmore: Continue reading
-      post_readmore_separator: <!-- more -->
+#      post_readmore: Continue reading
+#      post_readmore_separator: <!-- more -->
 
       # Archive
       archive: true
@@ -146,9 +146,9 @@ plugins:
       htmlmin_opts:
         remove_comments: true
   - git-revision-date-localized:
+      enable_git_follow: false
       enable_creation_date: true
       type: timeago
-      enable_git_follow: false
       fallback_to_build_date: true
       strict: false
 
