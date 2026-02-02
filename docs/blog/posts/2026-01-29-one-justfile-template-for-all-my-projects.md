@@ -361,15 +361,28 @@ just deploy prod  # Ship it
 
 ---
 
-## Download & Fork
+## Download & Use
 
-**Want this as a file?**
+**Get the template:**
 
-```bash
-curl -O https://gist.github.com/dr-saad-la/justfile-template
-```
+````bash
+# Download
+curl -o justfile https://raw.githubusercontent.com/dr-saad-la/polyglot-engineer-templates/main/justfile-templates/python/justfile
 
-*(Replace with your actual gist URL after publishing)*
+# Customize
+# Edit python_version and app_name variables
+
+# Use
+just setup
+just dev
+````
+
+### All Templates
+
+**Explore the complete collection:**  
+🔗 [github.com/dr-saad-la/polyglot-engineer-templates](https://github.com/dr-saad-la/polyglot-engineer-templates)
+
+**Categories:** Python, FastAPI,  CLI, ML, PyTorch, TensorFlow, NLP, Computer Vision, MLOps
 
 **Make it yours:** Fork it. Modify it. Share improvements.
 
