@@ -1,7 +1,8 @@
+# *****************************************************
 # Justfile for The Polyglot Engineer Blog
-# Run: just <command>
+# *****************************************************
 
-# Default recipe (shows available commands)
+# Default recipe
 default:
     @just --list
 
@@ -9,7 +10,7 @@ default:
 install:
     uv sync
 
-# Serve site locally with live reload
+# Serve site locally with live reload (click version 8.3.! breaks auto-reload)
 serve:
     uv run mkdocs serve --clean --dev-addr 127.0.0.1:8000
 
